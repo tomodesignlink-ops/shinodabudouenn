@@ -2044,7 +2044,7 @@
        2. 発行されたウェブアプリURLを下の GAS_URL に貼り付ける
        3. スプレッドシートの列構成：A=日付 / B=タグ / C=内容（1行目はヘッダー）
        -------------------------------------------------- */
-    const GAS_URL = 'https://script.google.com/macros/s/AKfycbyy_FWVv0h-uXSq6QnYvFL7PQygnFFYeUA3dDQ6Yu-n/dev'; // ← ここにGASのURLを貼り付ける
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbwHhlC3ymQ32HDfeLHNDScvLEzgKdX_MoZcFiBdbQaSawWvxjUn6RfRjP-0E9WXKDCasg/exec'; // ← ここにGASのURLを貼り付ける
 
     const newsWrap    = document.getElementById('newsWrap');
     const newsLoading = document.getElementById('newsLoading');
@@ -2084,7 +2084,7 @@
 
     async function loadNews() {
       /* URLが未設定のときはガイドメッセージを表示 */
-      if (!GAS_URL || GAS_URL === 'https://script.google.com/macros/s/AKfycbyy_FWVv0h-uXSq6QnYvFL7PQygnFFYeUA3dDQ6Yu-n/dev') {
+      if (!GAS_URL || GAS_URL === 'https://script.google.com/macros/s/AKfycbwHhlC3ymQ32HDfeLHNDScvLEzgKdX_MoZcFiBdbQaSawWvxjUn6RfRjP-0E9WXKDCasg/exec') {
         newsLoading.outerHTML =
           '<p class="news__error">※ お知らせはGoogleスプレッドシートと連携して表示されます。<br>GAS URLを設定後に自動で反映されます。</p>';
         return;
