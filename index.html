@@ -2084,7 +2084,7 @@
 
     async function loadNews() {
       /* URLが未設定のときはガイドメッセージを表示 */
-      if (!GAS_URL || GAS_URL === 'https://script.google.com/macros/s/AKfycbwgBjSYGIg2gzHtqPtUpJTBJS1QTOt7EwifQNS0Ibo96IZiof16BxnB-xz9DvXdpyj2/exec') {
+      if (!GAS_URL) {
         newsLoading.outerHTML =
           '<p class="news__error">※ お知らせはGoogleスプレッドシートと連携して表示されます。<br>GAS URLを設定後に自動で反映されます。</p>';
         return;
