@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>篠田ぶどう園 | 豊田市の直売ぶどう農園</title>
+  <meta name="description" content="愛知県豊田市で栽培した巨峰・シャインマスカット・ピオーネ・富士の輝を8月上旬から直売。収穫したてのぶどうをぜひ味わいください。">
+  <link rel="canonical" href="https://shinoda-budouen.jp/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="篠田ぶどう園 | 豊田市の直売ぶどう農園">
+  <meta property="og:description" content="愛知県豊田市で栽培した巨峰・シャインマスカット・ピオーネ・富士の輝を8月上旬から直売。">
+  <meta property="og:url" content="https://shinoda-budouen.jp/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="theme-color" content="#4a2d5c">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"篠田ぶどう園","address":{"@type":"PostalAddress","streetAddress":"日之出町2丁目10-3 山本ビル1階西","addressLocality":"豊田市","addressRegion":"愛知県","postalCode":"471-0075","addressCountry":"JP"},"openingHours":"Su 10:00-","sameAs":["https://www.instagram.com/toyota_budou/"]}
+  </script>
+
+  <style>
+    /* =========================================
+       CSS VARIABLES
+    ========================================= */
+    :root {
+      /* Colors */
+      --ivory:      #f5f0e8;
+      --ivory-d:    #ece6d8;
+      --ivory-dd:   #e0d8c8;
+      --white:      #fdfaf5;
+      --grape:      #5a3570;
+      --grape-d:    #3d2050;
+      --grape-m:    #7a4d8a;
+      --grape-pale: rgba(90,53,112,.09);
+      --grape-line: rgba(90,53,112,.14);
+      --green:      #496640;
+      --green-pale: rgba(73,102,64,.09);
+      --text:       #2e2820;
+      --text-2:     #5c5449;
+      --text-3:     #9c9087;
+
+      /* Shadow */
+      --sh-s:  0 2px 12px rgba(62,40,80,.06);
+      --sh-m:  0 6px 28px rgba(62,40,80,.11);
+      --sh-l:  0 16px 56px rgba(62,40,80,.17);
+
+      /* Typography */
+      --serif:  'Noto Serif JP', 'YuMincho', '游明朝', serif;
+      --sans:   'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+
+      /* Easing */
+      --ease: cubic-bezier(.22,1,.36,1);
+
+      /* Layout */
+      --wrap: 1200px;
+      --pad:  clamp(20px, 5vw, 56px);
+    }
+
+    /* =========================================
+       RESET & BASE
+    ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--ivory);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 400;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* =========================================
+       SKIP LINK
+    ========================================= */
+    .skip {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--grape);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 0 0 8px 8px;
+      font-size: 14px;
+      z-index: 9999;
+      transition: top .2s;
+    }
+    .skip:focus { top: 0; }
+
+    /* =========================================
+       HEADER — 薄いグレー背景
+    ========================================= */
+    .hdr {
+      position: fixed;
+      inset-block-start: 0;
+      inset-inline: 0;
+      z-index: 200;
+      background: rgba(240, 238, 234, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+      transition: background .4s var(--ease), border-color .4s var(--ease);
+    }
+    .hdr.scrolled {
+      background: rgba(236, 232, 225, 0.97);
+      border-bottom-color: rgba(0,0,0,.1);
+    }
+    .hdr__in {
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      gap: 1px;
+    }
+    .logo__ja {
+      font-family: var(--serif);
+      font-size: clamp(16px, 1.8vw, 19px);
+      font-weight: 500;
+      color: var(--grape-d);
+      letter-spacing: .1em;
+    }
+    .logo__en {
+      font-size: 10px;
+      color: var(--text-3);
+      letter-spacing: .18em;
+    }
+
+    /* Nav */
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav__list { display: flex; gap: 24px; }
+    .nav__a {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--text-2);
+      letter-spacing: .06em;
+      position: relative;
+      padding-block: 4px;
+      transition: color .4s var(--ease);
+    }
+    .nav__a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--grape-m);
+      transition: width .5s var(--ease);
+    }
+    .nav__a:hover, .nav__a[aria-current="true"] { color: var(--grape); }
+    .nav__a:hover::after, .nav__a[aria-current="true"]::after { width: 100%; }
+    .nav__a:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; border-radius: 2px; }
+
+    .nav__cta {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--grape-d);
+      letter-spacing: .06em;
+      padding: 8px 20px;
+      border: 1.5px solid var(--grape-line);
+      border-radius: 24px;
+      transition: background .4s var(--ease), border-color .4s var(--ease), color .4s var(--ease);
+      white-space: nowrap;
+    }
+    .nav__cta:hover {
+      background: var(--grape-pale);
+      border-color: var(--grape-m);
+    }
+    .nav__cta:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; }
+
+    /* Hamburger */
+    .ham {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .ham__b {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform .4s var(--ease), opacity .3s;
+      transform-origin: center;
+    }
+    .ham[aria-expanded="true"] .ham__b:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .ham[aria-expanded="true"] .ham__b:nth-child(2) { opacity: 0; }
+    .ham[aria-expanded="true"] .ham__b:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .ham:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; border-radius: 8px; }
+
+    /* Drawer */
+    .drawer {
+      display: none;
+      position: fixed;
+      inset: 60px 0 0;
+      background: var(--white);
+      z-index: 199;
+      padding: 40px var(--pad) 48px;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform .55s var(--ease);
+      overflow-y: auto;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer__a {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text);
+      padding-block: 20px;
+      border-bottom: 1px solid var(--ivory-dd);
+      display: block;
+      letter-spacing: .08em;
+      transition: color .4s var(--ease), padding-left .4s var(--ease);
+    }
+    .drawer__a:hover, .drawer__a:focus-visible { color: var(--grape); padding-left: 8px; }
+    .drawer__a:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; }
+    .drawer__cta {
+      margin-top: 32px;
+      display: block;
+      background: var(--grape);
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      transition: background .4s var(--ease);
+    }
+    .drawer__cta:hover { background: var(--grape-d); }
+    .drawer__insta {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--ivory-dd);
+      border-radius: 8px;
+      padding: 16px;
+      color: var(--text-2);
+      font-size: 15px;
+      transition: color .4s, border-color .4s;
+    }
+    .drawer__insta:hover { color: var(--grape); border-color: var(--grape-line); }
+
+    /* =========================================
+       HERO
+    ========================================= */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 560px;
+      overflow: hidden;
+    }
+    .hero__photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transform: scale(1.04);
+      animation: heroZoom 12s var(--ease) forwards;
+    }
+    @keyframes heroZoom {
+      to { transform: scale(1); }
+    }
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(20,10,30,.18) 0%,
+        rgba(20,10,30,.42) 50%,
+        rgba(20,10,30,.62) 75%,
+        rgba(245,240,232,1) 100%
+      );
+    }
+    .hero__cnt {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-inline: var(--pad);
+      padding-bottom: clamp(72px, 11vw, 128px);
+    }
+    .hero__tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: clamp(11px, 1.2vw, 13px);
+      font-weight: 400;
+      color: rgba(255,255,255,.8);
+      letter-spacing: .2em;
+      margin-bottom: clamp(14px, 2vw, 24px);
+      opacity: 0;
+      animation: fadeSlideUp .8s var(--ease) .3s forwards;
+    }
+    .hero__tag::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: rgba(255,255,255,.6);
+      flex-shrink: 0;
+    }
+    .hero__h1 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 7.5vw, 84px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: .04em;
+      word-break: keep-all;
+      opacity: 0;
+      animation: fadeSlideUp .9s var(--ease) .5s forwards;
+      text-shadow: 0 2px 24px rgba(0,0,0,.35);
+    }
+    .hero__h1-sub {
+      display: block;
+      font-size: clamp(14px, 2vw, 22px);
+      font-weight: 300;
+      letter-spacing: .12em;
+      color: rgba(255,255,255,.85);
+      margin-bottom: 10px;
+    }
+    .hero__sub {
+      font-size: clamp(14px, 1.6vw, 17px);
+      font-weight: 300;
+      color: rgba(255,255,255,.88);
+      line-height: 2;
+      margin-top: clamp(16px, 2vw, 24px);
+      max-width: 520px;
+      opacity: 0;
+      animation: fadeSlideUp .9s var(--ease) .7s forwards;
+      text-shadow: 0 1px 8px rgba(0,0,0,.3);
+    }
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: clamp(24px, 3vw, 36px);
+      opacity: 0;
+      animation: fadeSlideUp .9s var(--ease) .9s forwards;
+    }
+
+    /* Scroll indicator */
+    .hero__scroll {
+      position: absolute;
+      bottom: 28px;
+      right: clamp(20px, 4vw, 52px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeIn 1s var(--ease) 1.4s forwards;
+    }
+    .hero__scroll-line {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,.25);
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .hero__scroll-line::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,.7);
+      animation: scrollDrop 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollDrop {
+      0% { top: -100%; }
+      50%, 100% { top: 100%; }
+    }
+    .hero__scroll-txt {
+      font-size: 9px;
+      letter-spacing: .2em;
+      color: rgba(255,255,255,.45);
+      writing-mode: vertical-rl;
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--grape-d);
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 500;
+      padding: clamp(13px, 1.8vw, 16px) clamp(26px, 3.5vw, 36px);
+      border-radius: 4px;
+      letter-spacing: .06em;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .btn-primary:hover {
+      background: var(--ivory);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.14);
+    }
+    .btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,.88);
+      font-size: clamp(13px, 1.4vw, 14px);
+      font-weight: 400;
+      padding: clamp(12px, 1.6vw, 15px) clamp(22px, 3vw, 30px);
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,.5);
+      letter-spacing: .06em;
+      white-space: nowrap;
+      transition: border-color .4s var(--ease), background .4s var(--ease), transform .4s var(--ease);
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,.85);
+      background: rgba(255,255,255,.1);
+      transform: translateY(-2px);
+    }
+    .btn-ghost:focus-visible { outline: 2px solid rgba(255,255,255,.7); outline-offset: 4px; }
+
+    .btn-accent {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--grape);
+      color: #fff;
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 500;
+      padding: clamp(13px, 1.8vw, 16px) clamp(28px, 4vw, 40px);
+      border-radius: 4px;
+      letter-spacing: .06em;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+      transition: background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .btn-accent:hover {
+      background: var(--grape-d);
+      transform: translateY(-2px);
+      box-shadow: var(--sh-m);
+    }
+    .btn-accent:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--grape-d);
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 500;
+      padding: clamp(12px, 1.6vw, 15px) clamp(24px, 3.5vw, 36px);
+      border-radius: 4px;
+      border: 1.5px solid var(--grape-line);
+      letter-spacing: .06em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .4s var(--ease), border-color .4s var(--ease), transform .4s var(--ease);
+    }
+    .btn-outline:hover {
+      background: var(--grape-pale);
+      border-color: var(--grape-m);
+      transform: translateY(-2px);
+    }
+    .btn-outline:focus-visible { outline: 2px solid var(--grape); outline-offset: 4px; }
+
+    .btn-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      color: #fff;
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 500;
+      padding: clamp(13px, 1.8vw, 16px) clamp(28px, 4vw, 40px);
+      border-radius: 4px;
+      letter-spacing: .06em;
+      transition: opacity .4s var(--ease), transform .4s var(--ease);
+    }
+    .btn-insta:hover { opacity: .88; transform: translateY(-2px); }
+    .btn-insta:focus-visible { outline: 2px solid #833ab4; outline-offset: 4px; }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--grape-d);
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 500;
+      padding: clamp(14px, 2vw, 18px) clamp(32px, 5vw, 52px);
+      border-radius: 4px;
+      letter-spacing: .06em;
+      transition: background .4s var(--ease), transform .4s var(--ease), box-shadow .4s var(--ease);
+    }
+    .btn-white:hover {
+      background: var(--ivory);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,.18);
+    }
+    .btn-white:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+
+    /* =========================================
+       SECTION BASE
+    ========================================= */
+    .sec {
+      padding-block: clamp(72px, 10vw, 120px);
+    }
+    .sec__in {
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
+    .sec__hd {
+      margin-bottom: clamp(40px, 6vw, 72px);
+      text-align: center;
+    }
+    .sec__label {
+      display: inline-block;
+      font-family: var(--serif);
+      font-size: clamp(11px, 1.1vw, 12px);
+      font-weight: 400;
+      color: var(--grape-m);
+      letter-spacing: .3em;
+      margin-bottom: 16px;
+      position: relative;
+      padding-inline: 24px;
+    }
+    .sec__label::before, .sec__label::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 16px;
+      height: 1px;
+      background: var(--grape-m);
+      opacity: .5;
+    }
+    .sec__label::before { right: 0; }
+    .sec__label::after  { left:  0; }
+    .sec__ttl {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.8vw, 40px);
+      font-weight: 500;
+      color: var(--grape-d);
+      letter-spacing: .06em;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+    .sec__lead {
+      margin-top: 16px;
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 1.9;
+    }
+
+    /* =========================================
+       NEWS
+    ========================================= */
+    .news__list {
+      border-top: 1px solid var(--ivory-dd);
+      max-width: 780px;
+      margin-inline: auto;
+    }
+    .news__item {
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+      gap: 0 20px;
+      align-items: baseline;
+      padding-block: clamp(18px, 2.5vw, 24px);
+      border-bottom: 1px solid var(--ivory-dd);
+      transition: background .35s var(--ease), padding-left .35s var(--ease);
+      padding-inline: 12px;
+      border-radius: 0;
+    }
+    .news__item:hover { background: var(--grape-pale); padding-left: 18px; }
+    .news__item:focus-visible { outline: 2px solid var(--grape); outline-offset: -2px; }
+    .news__date {
+      font-size: clamp(12px, 1.3vw, 13px);
+      font-weight: 400;
+      color: var(--text-3);
+      letter-spacing: .08em;
+      white-space: nowrap;
+      font-feature-settings: "tnum";
+    }
+    .news__tag {
+      font-size: clamp(10px, 1.1vw, 11px);
+      font-weight: 500;
+      color: var(--grape);
+      background: var(--grape-pale);
+      padding: 3px 10px;
+      border-radius: 2px;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+    .news__tag--g { color: var(--green); background: var(--green-pale); }
+    .news__ttl {
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ローディングドット */
+    .news__loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding-block: 48px;
+    }
+    .news__loading-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--grape-line);
+      animation: dotPulse 1.4s ease-in-out infinite both;
+    }
+    .news__loading-dot:nth-child(1) { animation-delay: 0s; }
+    .news__loading-dot:nth-child(2) { animation-delay: .2s; }
+    .news__loading-dot:nth-child(3) { animation-delay: .4s; }
+    @keyframes dotPulse {
+      0%, 80%, 100% { transform: scale(.6); opacity: .3; }
+      40%            { transform: scale(1);  opacity: 1;  }
+    }
+
+    /* エラー・未設定表示 */
+    .news__error {
+      padding-block: 36px;
+      text-align: center;
+      font-size: clamp(13px, 1.4vw, 14px);
+      font-weight: 300;
+      color: var(--text-3);
+      line-height: 2;
+    }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+    .about__g {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 7vw, 96px);
+      align-items: center;
+    }
+    .about__ey {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--grape-m);
+      letter-spacing: .28em;
+      margin-bottom: 18px;
+    }
+    .about__h {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 500;
+      color: var(--grape-d);
+      line-height: 1.6;
+      letter-spacing: .04em;
+      margin-bottom: clamp(20px, 3vw, 32px);
+      word-break: keep-all;
+    }
+    .about__p {
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 2.1;
+      margin-bottom: 14px;
+    }
+    /* SVGクリップパス定義（曲線blob） */
+    .about__img-clip { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+    .about__img {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      clip-path: url(#blobClip);
+      transition: clip-path 1.4s cubic-bezier(.22,1,.36,1);
+    }
+    .about__img:hover {
+      clip-path: url(#blobClipHover);
+    }
+    .about__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform .9s var(--ease);
+    }
+    .about__img:hover img { transform: scale(1.03); }
+    .about__img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .about__img, .about__img:hover { clip-path: url(#blobClip); transition: none; }
+    }
+
+    /* Profile table */
+    .profile {
+      margin-top: 32px;
+      border-top: 1px solid var(--ivory-dd);
+    }
+    .profile__row {
+      display: grid;
+      grid-template-columns: 5.5em 1fr;
+      gap: 0 16px;
+      padding-block: 14px;
+      border-bottom: 1px solid var(--ivory-dd);
+      align-items: baseline;
+    }
+    .profile__row dt {
+      font-size: clamp(11px, 1.2vw, 12px);
+      font-weight: 500;
+      color: var(--text-3);
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+    .profile__row dd {
+      font-size: clamp(13px, 1.4vw, 14px);
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       FARMER
+    ========================================= */
+    .farmer__g {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 7vw, 96px);
+      align-items: center;
+    }
+    .farmer__photo { display: flex; justify-content: center; }
+    .farmer__photo-inner {
+      width: clamp(200px, 32vw, 360px);
+      height: clamp(200px, 32vw, 360px);
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(90,53,112,.15);
+      box-shadow: var(--sh-m);
+      background: rgba(90,53,112,.04);
+    }
+    .farmer__photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 14px; color: var(--text-3); font-size: 12px; letter-spacing: .06em;
+    }
+    .farmer__ey {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--grape-m);
+      letter-spacing: .28em;
+      margin-bottom: 12px;
+    }
+    .farmer__h {
+      font-family: var(--serif);
+      font-size: clamp(13px, 1.5vw, 15px);
+      font-weight: 400;
+      color: var(--text-3);
+      letter-spacing: .1em;
+      margin-bottom: 8px;
+    }
+    .farmer__name {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 500;
+      color: var(--grape-d);
+      margin-bottom: 28px;
+      letter-spacing: .1em;
+      line-height: 1.3;
+    }
+    .farmer__name span {
+      font-size: clamp(13px, 1.4vw, 15px);
+      font-weight: 300;
+      color: var(--text-3);
+      margin-left: 8px;
+      letter-spacing: .08em;
+    }
+    .farmer__body p {
+      font-size: clamp(14px, 1.5vw, 15px);
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 2.1;
+      margin-bottom: 16px;
+    }
+
+    /* =========================================
+       PRODUCTS — 品種カード
+    ========================================= */
+    .products__g {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(230px,100%), 1fr));
+      gap: clamp(12px, 2vw, 20px);
+    }
+    .variety {
+      background: var(--white);
+      border: 1px solid var(--ivory-dd);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+    }
+    .variety:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sh-m);
+    }
+    .variety__img {
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      background: rgba(90,53,112,.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .variety__img svg { width: 100%; height: 100%; }
+    .variety__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--grape-d);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 2px;
+      letter-spacing: .06em;
+    }
+    .variety__badge--green { background: var(--green); }
+    .variety__badge--light { background: var(--grape-m); }
+    .variety__badge--queen {
+      background: linear-gradient(135deg, rgba(200,75,100,.88), rgba(180,55,80,.92));
+      font-size: 9.5px;
+      letter-spacing: .04em;
+    }
+    .variety__body { padding: clamp(16px, 2.5vw, 22px); }
+    .variety__name {
+      font-family: var(--serif);
+      font-size: clamp(17px, 2vw, 21px);
+      font-weight: 500;
+      color: var(--grape-d);
+      margin-bottom: 4px;
+      letter-spacing: .04em;
+    }
+    .variety__en {
+      display: block;
+      font-size: 11px;
+      color: var(--text-3);
+      letter-spacing: .14em;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    .variety__desc {
+      font-size: clamp(13px, 1.4vw, 14px);
+      font-weight: 300;
+      color: var(--text-2);
+      line-height: 1.85;
+    }
+
+    /* =========================================
+       GALLERY
+    ========================================= */
+    /* 左右2房レイアウト */
+    .gallery__duo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: clamp(24px, 5vw, 64px);
+    }
+
+    /* 各房ラッパー */
+    .gallery__cluster {
+      position: relative;
+      /* 3粒が収まるサイズ感 */
+      width:  clamp(160px, 28vw, 280px);
+      height: clamp(200px, 36vw, 360px);
+      flex-shrink: 0;
+    }
+    /* 右の房を少し下にずらす */
+    .gallery__cluster--right {
+      margin-top: clamp(36px, 6vw, 72px);
+    }
+
+    /* 個々の粒（円形） */
+    .gi {
+      position: absolute;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,.82);
+      box-shadow: var(--sh-m);
+      transition: transform .65s var(--ease), box-shadow .65s var(--ease);
+    }
+    .gi img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .75s var(--ease);
+      display: block;
+    }
+    .gi:hover {
+      box-shadow: var(--sh-l);
+      z-index: 10;
+    }
+    .gi:hover img { transform: scale(1.05); }
+
+    /*
+      左房 3粒配置：
+        上左 (gi--1)・上右 (gi--2)・下中央 (gi--3)
+      右房 3粒配置：
+        上左 (gi--4)・上右 (gi--5)・下中央 (gi--6)
+      ※ 粒サイズ = 房幅の約58%
+    */
+    .gi--1 { width: 58%; height: 58%; top: 0;    left: 0; }
+    .gi--2 { width: 58%; height: 58%; top: 0;    right: 0; }
+    .gi--3 {
+      width: 66%; height: 66%;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+    }
+    .gi--3:hover { transform: translateX(-50%) scale(1.04) translateY(-4px); }
+
+    .gi--4 { width: 58%; height: 58%; top: 0;    left: 0; }
+    .gi--5 { width: 58%; height: 58%; top: 0;    right: 0; }
+    .gi--6 {
+      width: 66%; height: 66%;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+    }
+    .gi--6:hover { transform: translateX(-50%) scale(1.04) translateY(-4px); }
+
+    /* ふわりと浮かぶ呼吸アニメ（房ごとタイミングをずらす） */
+    .gallery__cluster--left  { animation: breatheL 6s ease-in-out infinite; }
+    .gallery__cluster--right { animation: breatheR 6s ease-in-out 1.5s infinite; }
+    @keyframes breatheL {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-8px); }
+    }
+    @keyframes breatheR {
+      0%, 100% { transform: translateY(clamp(36px,6vw,72px)); }
+      50%       { transform: translateY(calc(clamp(36px,6vw,72px) - 8px)); }
+    }
+
+    .insta-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: clamp(40px, 5vw, 64px);
+    }
+
+    /* =========================================
+       SEASON
+    ========================================= */
+    .season-bar {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid var(--ivory-dd);
+      background: var(--white);
+      max-width: 680px;
+      margin-inline: auto;
+    }
+    .smo {
+      text-align: center;
+      padding-block: 20px 14px;
+      color: var(--text-3);
+      border-right: 1px solid var(--ivory-dd);
+      position: relative;
+      /* アニメ前の初期状態 */
+      opacity: 1;
+      transition: background .6s var(--ease), color .6s var(--ease), transform .5s var(--ease);
+    }
+    .smo:last-child { border-right: none; }
+
+    /* スクロール前はベース表示 */
+    .smo--on  { background: var(--grape);      color: #fff; }
+    .smo--dim { background: var(--grape-pale); color: var(--grape); }
+
+    /* アニメーション開始時に一度リセット → 順番に点灯 */
+    .season-bar.is-animating .smo--on,
+    .season-bar.is-animating .smo--dim {
+      background: var(--white);
+      color: var(--text-3);
+    }
+    /* アクティブ月が光るクラス（JSで付与） */
+    .smo.lit-on {
+      background: var(--grape) !important;
+      color: #fff !important;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(61,32,80,.25);
+      z-index: 2;
+    }
+    .smo.lit-dim {
+      background: var(--grape-pale) !important;
+      color: var(--grape) !important;
+      transform: translateY(-2px);
+    }
+
+    /* 点灯後のぶどう粒アイコン */
+    .smo__grape {
+      display: none;
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 3px;
+      opacity: 0;
+      transform: scale(.6);
+      transition: opacity .4s var(--ease), transform .4s var(--ease);
+    }
+    .smo.lit-on .smo__grape,
+    .smo.lit-dim .smo__grape {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* 販売中アクティブ月：呼吸するハイライト */
+    .smo.lit-on::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 0;
+      background: rgba(255,255,255,.12);
+      animation: shimmer 2.4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes shimmer {
+      0%, 100% { opacity: 0; }
+      50%       { opacity: 1; }
+    }
+
+    .smo__l {
+      display: block;
+      font-size: clamp(9px, 1vw, 10px);
+      font-weight: 500;
+      margin-bottom: 6px;
+      letter-spacing: .05em;
+    }
+    .smo__n {
+      display: block;
+      font-family: var(--serif);
+      font-size: clamp(20px, 2.8vw, 28px);
+      font-weight: 500;
+      line-height: 1;
+    }
+    .season-note {
+      margin-top: 20px;
+      text-align: center;
+      font-size: clamp(12px, 1.3vw, 13px);
+      font-weight: 300;
+      color: var(--text-3);
+    }
+
+    /* =========================================
+       ACCESS
+    ========================================= */
+    .access__g {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 64px);
+    }
+    .tbl { width: 100%; border-collapse: collapse; }
+    .tbl tr { border-bottom: 1px solid var(--ivory-dd); }
+    .tbl tr:first-child { border-top: 1px solid var(--ivory-dd); }
+    .tbl th {
+      padding-block: clamp(14px, 1.8vw, 18px);
+      padding-right: 20px;
+      font-size: clamp(11px, 1.2vw, 12px);
+      font-weight: 500;
+      color: var(--text-3);
+      letter-spacing: .06em;
+      vertical-align: top;
+      white-space: nowrap;
+      text-align: left;
+    }
+    .tbl td {
+      padding-block: clamp(14px, 1.8vw, 18px);
+      font-size: clamp(13px, 1.5vw, 15px);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.9;
+    }
+    .tbl td a { color: var(--grape); text-decoration: underline; text-underline-offset: 3px; }
+    .access__note {
+      margin-top: 18px;
+      font-size: clamp(12px, 1.3vw, 13px);
+      font-weight: 300;
+      color: var(--text-3);
+      line-height: 1.9;
+    }
+    .mapw {
+      border-radius: 2px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: var(--sh-s);
+    }
+    .mapw iframe { width: 100%; height: 100%; border: none; }
+
+    /* =========================================
+       CTA BANNER
+    ========================================= */
+    .cta-band {
+      background: var(--grape-d);
+      padding-block: clamp(72px, 10vw, 120px);
+      position: relative;
+      overflow: hidden;
+    }
+    /* 装飾：ぼんやりした円 */
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -8%;
+      width: 55%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(255,255,255,.03);
+      pointer-events: none;
+    }
+    .cta-band::after {
+      content: '';
+      position: absolute;
+      bottom: -25%;
+      left: -5%;
+      width: 42%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(255,255,255,.025);
+      pointer-events: none;
+    }
+    .cta-band__in {
+      max-width: 600px;
+      margin-inline: auto;
+      padding-inline: var(--pad);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-band__eyebrow {
+      display: block;
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255,255,255,.45);
+      letter-spacing: .28em;
+      margin-bottom: 20px;
+    }
+    .cta-band__h {
+      font-family: var(--serif);
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: .06em;
+      line-height: 1.55;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .cta-band__p {
+      font-size: clamp(14px, 1.5vw, 16px);
+      font-weight: 300;
+      color: rgba(255,255,255,.68);
+      line-height: 2;
+      margin-bottom: clamp(32px, 4.5vw, 48px);
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    .ftr {
+      background: #1e1a16;
+      color: rgba(255,255,255,.5);
+      padding-block: clamp(36px, 5vw, 56px);
+    }
+    .ftr__in {
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
+    .ftr__top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      margin-bottom: 24px;
+    }
+    .ftr__logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255,255,255,.8);
+      letter-spacing: .1em;
+    }
+    .ftr__logo-en {
+      display: block;
+      font-size: 10px;
+      letter-spacing: .18em;
+      color: rgba(255,255,255,.3);
+      margin-top: 3px;
+    }
+    .ftr__nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 22px;
+    }
+    .ftr__a {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,.42);
+      letter-spacing: .05em;
+      transition: color .35s;
+    }
+    .ftr__a:hover { color: rgba(255,255,255,.8); }
+    .ftr__a:focus-visible { outline: 1px solid rgba(255,255,255,.4); outline-offset: 4px; }
+    .ftr__copy {
+      font-size: 11px;
+      color: rgba(255,255,255,.22);
+      text-align: center;
+    }
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .75s var(--ease), transform .75s var(--ease);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .reveal--d1 { transition-delay: .1s; }
+    .reveal--d2 { transition-delay: .2s; }
+    .reveal--d3 { transition-delay: .3s; }
+    .reveal--d4 { transition-delay: .4s; }
+
+    /* =========================================
+       DIVIDER
+    ========================================= */
+    .divider {
+      max-width: var(--wrap);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
+    .divider hr {
+      border: none;
+      border-top: 1px solid var(--ivory-dd);
+    }
+
+    /* =========================================
+       REDUCED MOTION
+    ========================================= */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .hero__photo { animation: none; transform: none; }
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 1024px) {
+      .about__g { grid-template-columns: 1fr; }
+      .about__txt { order: 1; }
+      .about__img-wrap { order: 2; max-width: 520px; margin-inline: auto; width: 100%; }
+      .access__g { grid-template-columns: 1fr; }
+      .farmer__g { grid-template-columns: 1fr; }
+      .farmer__photo { order: 1; }
+      .farmer__text { order: 2; }
+      .farmer__photo-inner { width: clamp(160px, 48vw, 260px); height: clamp(160px, 48vw, 260px); }
+    }
+
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .ham { display: flex; }
+      .drawer { display: flex; }
+      .season-bar { grid-template-columns: repeat(3, 1fr); }
+      .smo { border-bottom: 1px solid var(--ivory-dd); }
+      .news__item {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: 6px 12px;
+      }
+      .news__date { grid-row: 1; }
+      .news__tag  { grid-row: 1; }
+      .news__ttl  { grid-column: 1 / -1; grid-row: 2; }
+      /* タブレット：房を少し小さく */
+      .gallery__cluster {
+        width:  clamp(130px, 22vw, 200px);
+        height: clamp(160px, 28vw, 260px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      html { font-size: 16px; }
+      .hero__scroll { display: none; }
+      .products__g { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .variety__body { padding: 14px; }
+      .ftr__nav { justify-content: center; }
+
+      /* スマホ：2房を縦に並べ、右の下ズレを左寄せへ変更 */
+      .gallery__duo {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+      }
+      .gallery__cluster {
+        width:  clamp(180px, 70vw, 260px);
+        height: clamp(220px, 88vw, 320px);
+      }
+      .gallery__cluster--right {
+        margin-top: 0;
+      }
+      /* breatheR の translateY は margin-top 0 に合わせてリセット */
+      .gallery__cluster--right {
+        animation: breatheL 6s ease-in-out 1.5s infinite;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .products__g { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================
+       UTILITY
+    ========================================= */
+    .center { text-align: center; }
+    .mt-sm { margin-top: clamp(16px, 2.5vw, 24px); }
+    .mt-md { margin-top: clamp(24px, 3.5vw, 36px); }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">メインコンテンツへ</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="hdr" role="banner">
+    <div class="hdr__in">
+      <a class="logo" href="/" aria-label="篠田ぶどう園 トップページへ">
+        <span class="logo__ja">篠田ぶどう園</span>
+        <span class="logo__en">Shinoda Budouen</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <ul class="nav__list" role="list">
+          <li><a class="nav__a" href="#news">お知らせ</a></li>
+          <li><a class="nav__a" href="#about">農園について</a></li>
+          <li><a class="nav__a" href="#farmer">農家紹介</a></li>
+          <li><a class="nav__a" href="#products">品種</a></li>
+          <li><a class="nav__a" href="#gallery">写真</a></li>
+          <li><a class="nav__a" href="#access">アクセス</a></li>
+        </ul>
+        <a class="nav__cta" href="#access">直売店へ行く</a>
+      </nav>
+      <button class="ham" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く">
+        <span class="ham__b" aria-hidden="true"></span>
+        <span class="ham__b" aria-hidden="true"></span>
+        <span class="ham__b" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== DRAWER (モバイル) ========== -->
+  <nav class="drawer" id="drawer" aria-label="モバイルナビゲーション">
+    <a class="drawer__a" href="#news">お知らせ</a>
+    <a class="drawer__a" href="#about">農園について</a>
+    <a class="drawer__a" href="#farmer">農家紹介</a>
+    <a class="drawer__a" href="#products">品種</a>
+    <a class="drawer__a" href="#gallery">写真</a>
+    <a class="drawer__a" href="#access">アクセス</a>
+    <a class="drawer__cta" href="#access">直売店へ行く</a>
+    <a class="drawer__insta"
+      href="https://www.instagram.com/toyota_budou/"
+      target="_blank" rel="noopener noreferrer"
+      aria-label="Instagram @toyota_budou を見る（新しいタブで開きます）">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      @toyota_budou
+    </a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-h">
+      <img
+        class="hero__photo"
+        src="hero.jpg"
+        alt="篠田ぶどう園の農場。棚からみずみずしく垂れるシャインマスカットの房"
+        width="1123" height="1400"
+        loading="eager" decoding="async" fetchpriority="high">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__cnt">
+        <p class="hero__tag">豊田市 日之出町 直売</p>
+        <h1 class="hero__h1" id="hero-h">
+          <span class="hero__h1-sub">大地の恵みを、直接お届け</span>
+          篠田ぶどう園
+        </h1>
+        <p class="hero__sub">
+          豊田市内の自社農場で丁寧に育てたぶどうを、<br>
+          8月上旬から直売店でお届けします。
+        </p>
+        <div class="hero__actions">
+          <a class="btn-primary" href="#products">品種を見る</a>
+          <a class="btn-ghost" href="#access">直売店の場所</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span class="hero__scroll-txt">scroll</span>
+      </div>
+    </section>
+
+    <!-- ========== NEWS ========== -->
+    <section class="sec" id="news" aria-labelledby="news-h">
+      <div class="sec__in">
+        <header class="sec__hd reveal">
+          <span class="sec__label">News</span>
+          <h2 class="sec__ttl" id="news-h">お知らせ</h2>
+        </header>
+        <!-- ▼ GAS URLをJS内の GAS_URL 変数に設定してください -->
+        <div id="newsWrap" class="news__list" role="list" aria-live="polite" aria-label="お知らせ一覧">
+          <div class="news__loading" id="newsLoading" aria-label="読み込み中">
+            <span class="news__loading-dot"></span>
+            <span class="news__loading-dot"></span>
+            <span class="news__loading-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="sec" id="about" aria-labelledby="about-h">
+      <div class="sec__in">
+        <div class="about__g">
+          <div class="about__txt reveal">
+            <span class="about__ey">About</span>
+            <h2 class="about__h" id="about-h">
+              豊田の大地で育てた<br>本物の味を、直接お届け。
+            </h2>
+            <p class="about__p">篠田ぶどう園は、愛知県豊田市内の自社農場でぶどうを栽培し、収穫したてのものをそのまま直売店でご提供しています。</p>
+            <p class="about__p">中間業者を通さないからこそお届けできる新鮮さと価格。土に向き合い、一房一房を丁寧に仕上げたぶどうを、ぜひ直接手に取ってみてください。</p>
+            <p class="about__p">販売は8月上旬から始まります。品種によって旬の時期が異なりますので、ご来店はお早めに。</p>
+
+            <dl class="profile">
+              <div class="profile__row">
+                <dt>就農</dt>
+                <dd>令和5年（2023年）より豊田市にて新規就農</dd>
+              </div>
+              <div class="profile__row">
+                <dt>栽培面積</dt>
+                <dd>簡易雨除け 10a ／ 露地 20a</dd>
+              </div>
+              <div class="profile__row">
+                <dt>経歴</dt>
+                <dd>愛知県立農業大学校 令和2年卒業後、大府市のぶどう農家にて2年9ヶ月の研修を経て就農</dd>
+              </div>
+              <div class="profile__row">
+                <dt>販売開始</dt>
+                <dd>令和6年（2024年）より直売開始</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- SVGクリップパス定義（曲線blob） -->
+          <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+            <defs>
+              <clipPath id="blobClip" clipPathUnits="objectBoundingBox">
+                <path d="M 0.08,0.02 C 0.22,-0.02 0.55,-0.01 0.78,0.04 C 0.96,0.08 1.02,0.22 0.99,0.42 C 0.97,0.60 1.00,0.76 0.95,0.88 C 0.88,1.02 0.68,1.01 0.50,1.00 C 0.30,0.99 0.10,1.02 0.04,0.90 C -0.02,0.78 0.01,0.60 0.02,0.42 C 0.03,0.22 -0.04,0.06 0.08,0.02 Z"/>
+              </clipPath>
+              <clipPath id="blobClipHover" clipPathUnits="objectBoundingBox">
+                <path d="M 0.05,0.06 C 0.16,-0.03 0.50,0.00 0.74,0.02 C 0.94,0.04 1.03,0.18 1.00,0.40 C 0.98,0.58 1.02,0.78 0.92,0.92 C 0.82,1.04 0.60,0.99 0.40,1.00 C 0.20,1.01 0.04,1.03 0.02,0.88 C -0.01,0.72 0.03,0.55 0.03,0.38 C 0.03,0.20 -0.03,0.12 0.05,0.06 Z"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="about__img-wrap reveal reveal--d2">
+            <div class="about__img">
+              <img
+                src="about.jpg"
+                alt="篠田ぶどう園。棚からみずみずしく垂れるぶどうの房"
+                width="900" height="1200"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== FARMER ========== -->
+    <section class="sec" id="farmer" aria-labelledby="farmer-h">
+      <div class="sec__in">
+        <div class="farmer__g">
+          <div class="farmer__photo reveal reveal--d1" aria-label="農家・岩附さんの写真（後日追加予定）">
+            <div class="farmer__photo-inner">
+              <div class="farmer__photo-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="56" height="56" aria-hidden="true">
+                  <circle cx="60" cy="44" r="22" fill="rgba(90,53,112,.2)"/>
+                  <ellipse cx="60" cy="95" rx="36" ry="22" fill="rgba(90,53,112,.14)"/>
+                </svg>
+                <p>写真は後日追加予定</p>
+              </div>
+            </div>
+          </div>
+          <div class="farmer__text reveal">
+            <span class="farmer__ey">Farmer</span>
+            <p class="farmer__h" id="farmer-h">農家紹介</p>
+            <p class="farmer__name">岩附 <span>（いわつき）</span></p>
+            <div class="farmer__body">
+              <p>愛知県立農業大学校を卒業後、大府市のぶどう農家のもとで2年9ヶ月にわたり研修を積み、令和5年に豊田市で新規就農しました。</p>
+              <p>ぶどう栽培の魅力は、手をかけた分だけ応えてくれること。一房一房に向き合いながら、食べてくださる方の笑顔を思い浮かべて育てています。</p>
+              <p>まだ就農して間もないですが、豊田の土地でしか味わえない、自分にしかつくれないぶどうを届けていきたいと思っています。直売所でお会いできることを楽しみにしています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="sec" id="products" aria-labelledby="products-h">
+      <div class="sec__in">
+        <header class="sec__hd reveal">
+          <span class="sec__label">Varieties</span>
+          <h2 class="sec__ttl" id="products-h">取り扱い品種</h2>
+          <p class="sec__lead">どの品種も、豊田の気候と土壌が育んだ自慢のぶどうです。</p>
+        </header>
+        <div class="products__g">
+
+          <!-- 巨峰 -->
+          <article class="variety reveal" aria-labelledby="v-kyoho">
+            <div class="variety__img">
+              <svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%">
+                <rect width="280" height="210" fill="rgba(44,24,64,.05)"/>
+                <!-- 茎 -->
+                <line x1="140" y1="20" x2="140" y2="52" stroke="rgba(80,50,30,.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- 葉 -->
+                <ellipse cx="128" cy="28" rx="12" ry="8" fill="rgba(78,110,60,.28)" transform="rotate(-25,128,28)"/>
+                <g transform="translate(140,106)">
+                  <!-- Row 1 -->
+                  <circle cx="0" cy="-44" r="21" fill="rgba(34,14,54,.78)"/>
+                  <!-- Row 2 -->
+                  <circle cx="-24" cy="-18" r="21" fill="rgba(44,24,64,.80)"/>
+                  <circle cx="24" cy="-18" r="21" fill="rgba(34,14,54,.76)"/>
+                  <!-- Row 3 -->
+                  <circle cx="-46" cy="10" r="21" fill="rgba(44,24,64,.76)"/>
+                  <circle cx="0" cy="10" r="21" fill="rgba(54,30,74,.80)"/>
+                  <circle cx="46" cy="10" r="21" fill="rgba(34,14,54,.76)"/>
+                  <!-- Row 4 -->
+                  <circle cx="-24" cy="38" r="21" fill="rgba(44,24,64,.80)"/>
+                  <circle cx="24" cy="38" r="21" fill="rgba(34,14,54,.76)"/>
+                  <!-- Row 5 -->
+                  <circle cx="0" cy="64" r="18" fill="rgba(44,24,64,.72)"/>
+                  <!-- ハイライト -->
+                  <circle cx="-6" cy="-50" r="6" fill="rgba(255,255,255,.22)"/>
+                  <circle cx="20" cy="-22" r="5" fill="rgba(255,255,255,.18)"/>
+                </g>
+              </svg>
+              <span class="variety__badge">定番</span>
+            </div>
+            <div class="variety__body">
+              <h3 class="variety__name" id="v-kyoho">巨峰<span class="variety__en">Kyoho</span></h3>
+              <p class="variety__desc">濃厚な甘みとやわらかな果肉。大粒で食べごたえのある定番の黒ぶどうです。</p>
+            </div>
+          </article>
+
+          <!-- シャインマスカット -->
+          <article class="variety reveal reveal--d1" aria-labelledby="v-shine">
+            <div class="variety__img">
+              <svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%">
+                <rect width="280" height="210" fill="rgba(78,110,60,.05)"/>
+                <line x1="140" y1="20" x2="140" y2="52" stroke="rgba(80,50,30,.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <ellipse cx="128" cy="28" rx="12" ry="8" fill="rgba(78,110,60,.28)" transform="rotate(-25,128,28)"/>
+                <g transform="translate(140,106)">
+                  <circle cx="0" cy="-44" r="21" fill="rgba(155,200,100,.72)"/>
+                  <circle cx="-24" cy="-18" r="21" fill="rgba(140,185,88,.74)"/>
+                  <circle cx="24" cy="-18" r="21" fill="rgba(155,200,100,.70)"/>
+                  <circle cx="-46" cy="10" r="21" fill="rgba(140,185,88,.70)"/>
+                  <circle cx="0" cy="10" r="21" fill="rgba(162,210,108,.76)"/>
+                  <circle cx="46" cy="10" r="21" fill="rgba(140,185,88,.68)"/>
+                  <circle cx="-24" cy="38" r="21" fill="rgba(155,200,100,.72)"/>
+                  <circle cx="24" cy="38" r="21" fill="rgba(140,185,88,.70)"/>
+                  <circle cx="0" cy="64" r="18" fill="rgba(155,200,100,.66)"/>
+                  <circle cx="-6" cy="-50" r="7" fill="rgba(255,255,255,.42)"/>
+                  <circle cx="20" cy="-22" r="5" fill="rgba(255,255,255,.36)"/>
+                </g>
+              </svg>
+              <span class="variety__badge variety__badge--green">人気</span>
+            </div>
+            <div class="variety__body">
+              <h3 class="variety__name" id="v-shine">シャインマスカット<span class="variety__en">Shine Muscat</span></h3>
+              <p class="variety__desc">皮ごと食べられる爽やかな甘み。芳醇なマスカット香が広がる白ぶどうです。</p>
+            </div>
+          </article>
+
+          <!-- ピオーネ -->
+          <article class="variety reveal reveal--d2" aria-labelledby="v-pione">
+            <div class="variety__img">
+              <svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%">
+                <rect width="280" height="210" fill="rgba(80,40,110,.05)"/>
+                <line x1="140" y1="20" x2="140" y2="52" stroke="rgba(80,50,30,.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <ellipse cx="128" cy="28" rx="12" ry="8" fill="rgba(78,110,60,.28)" transform="rotate(-25,128,28)"/>
+                <g transform="translate(140,106)">
+                  <circle cx="0" cy="-44" r="21" fill="rgba(78,38,108,.76)"/>
+                  <circle cx="-24" cy="-18" r="21" fill="rgba(88,48,118,.78)"/>
+                  <circle cx="24" cy="-18" r="21" fill="rgba(78,38,108,.74)"/>
+                  <circle cx="-46" cy="10" r="21" fill="rgba(88,48,118,.74)"/>
+                  <circle cx="0" cy="10" r="21" fill="rgba(98,58,128,.78)"/>
+                  <circle cx="46" cy="10" r="21" fill="rgba(78,38,108,.72)"/>
+                  <circle cx="-24" cy="38" r="21" fill="rgba(88,48,118,.76)"/>
+                  <circle cx="24" cy="38" r="21" fill="rgba(78,38,108,.74)"/>
+                  <circle cx="0" cy="64" r="18" fill="rgba(88,48,118,.68)"/>
+                  <circle cx="-6" cy="-50" r="6" fill="rgba(255,255,255,.20)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="variety__body">
+              <h3 class="variety__name" id="v-pione">ピオーネ<span class="variety__en">Pione</span></h3>
+              <p class="variety__desc">巨峰とマスカットの掛け合わせ。上品な甘さと豊かな香りが魅力の大粒品種です。</p>
+            </div>
+          </article>
+
+          <!-- 富士の輝 -->
+          <article class="variety reveal reveal--d3" aria-labelledby="v-fuji">
+            <div class="variety__img">
+              <svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%">
+                <rect width="280" height="210" fill="rgba(122,77,138,.05)"/>
+                <line x1="140" y1="20" x2="140" y2="52" stroke="rgba(80,50,30,.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <ellipse cx="128" cy="28" rx="12" ry="8" fill="rgba(78,110,60,.28)" transform="rotate(-25,128,28)"/>
+                <g transform="translate(140,106)">
+                  <circle cx="0" cy="-44" r="21" fill="rgba(168,128,188,.65)"/>
+                  <circle cx="-24" cy="-18" r="21" fill="rgba(158,118,178,.67)"/>
+                  <circle cx="24" cy="-18" r="21" fill="rgba(168,128,188,.63)"/>
+                  <circle cx="-46" cy="10" r="21" fill="rgba(158,118,178,.63)"/>
+                  <circle cx="0" cy="10" r="21" fill="rgba(178,138,198,.68)"/>
+                  <circle cx="46" cy="10" r="21" fill="rgba(158,118,178,.61)"/>
+                  <circle cx="-24" cy="38" r="21" fill="rgba(168,128,188,.65)"/>
+                  <circle cx="24" cy="38" r="21" fill="rgba(158,118,178,.63)"/>
+                  <circle cx="0" cy="64" r="18" fill="rgba(168,128,188,.58)"/>
+                  <circle cx="-6" cy="-50" r="7" fill="rgba(255,255,255,.34)"/>
+                </g>
+              </svg>
+              <span class="variety__badge variety__badge--light">希少</span>
+            </div>
+            <div class="variety__body">
+              <h3 class="variety__name" id="v-fuji">富士の輝<span class="variety__en">Fuji no Kagayaki</span></h3>
+              <p class="variety__desc">やわらかな甘みと美しい色合いの希少品種。出会えたらぜひ味わっていただきたい一房です。</p>
+            </div>
+          </article>
+
+          <!-- クインニーナ -->
+          <article class="variety reveal reveal--d4" aria-labelledby="v-queen">
+            <div class="variety__img">
+              <svg viewBox="0 0 280 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%">
+                <rect width="280" height="210" fill="rgba(180,60,80,.04)"/>
+                <line x1="140" y1="20" x2="140" y2="52" stroke="rgba(80,50,30,.35)" stroke-width="2.5" stroke-linecap="round"/>
+                <ellipse cx="128" cy="28" rx="12" ry="8" fill="rgba(78,110,60,.28)" transform="rotate(-25,128,28)"/>
+                <g transform="translate(140,106)">
+                  <circle cx="0"   cy="-44" r="21" fill="rgba(210,90,110,.68)"/>
+                  <circle cx="-24" cy="-18" r="21" fill="rgba(200,80,100,.70)"/>
+                  <circle cx="24"  cy="-18" r="21" fill="rgba(215,95,115,.66)"/>
+                  <circle cx="-14" cy="12"  r="21" fill="rgba(205,85,105,.68)"/>
+                  <circle cx="14"  cy="12"  r="21" fill="rgba(210,90,110,.64)"/>
+                  <circle cx="0"   cy="44"  r="18" fill="rgba(200,80,100,.60)"/>
+                  <circle cx="-6"  cy="-50" r="7"  fill="rgba(255,255,255,.38)"/>
+                  <circle cx="20"  cy="-22" r="5"  fill="rgba(255,255,255,.28)"/>
+                </g>
+                <text x="228" y="38" font-size="14" fill="rgba(210,90,110,.35)" font-family="serif">✦</text>
+                <text x="38"  y="52" font-size="10" fill="rgba(210,90,110,.25)" font-family="serif">✦</text>
+              </svg>
+              <span class="variety__badge variety__badge--queen">出会えたらラッキー</span>
+            </div>
+            <div class="variety__body">
+              <h3 class="variety__name" id="v-queen">クインニーナ<span class="variety__en">Queen Nina</span></h3>
+              <p class="variety__desc">現在試作中の希少品種。畑にある数がごくわずかで、出会えたらそれはラッキー。やさしい甘みと上品な色合いをぜひ味わってみてください。</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="sec" id="gallery" aria-labelledby="gallery-h">
+      <div class="sec__in">
+        <header class="sec__hd reveal">
+          <span class="sec__label">Gallery</span>
+          <h2 class="sec__ttl" id="gallery-h">農園の風景</h2>
+          <p class="sec__lead">Instagramでも旬の情報を発信しています。</p>
+        </header>
+
+        <div class="gallery__duo reveal">
+
+          <!-- 左の房 -->
+          <div class="gallery__cluster gallery__cluster--left" role="group" aria-label="農園の写真（左）">
+            <!-- 上左 -->
+            <div class="gi gi--1">
+              <img
+                src="gallery-01.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+            <!-- 上右 -->
+            <div class="gi gi--2">
+              <img
+                src="gallery-02.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+            <!-- 下中央（大） -->
+            <div class="gi gi--3">
+              <img
+                src="gallery-03.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <!-- 右の房（少し下にずれる） -->
+          <div class="gallery__cluster gallery__cluster--right" role="group" aria-label="農園の写真（右）">
+            <!-- 上左 -->
+            <div class="gi gi--4">
+              <img
+                src="gallery-04.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+            <!-- 上右 -->
+            <div class="gi gi--5">
+              <img
+                src="gallery-05.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+            <!-- 下中央（大） -->
+            <div class="gi gi--6">
+              <img
+                src="gallery-06.jpg"
+                alt="農園の風景"
+                width="400" height="400"
+                loading="lazy" decoding="async">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="insta-wrap reveal">
+          <a class="btn-insta"
+            href="https://www.instagram.com/toyota_budou/"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram @toyota_budou を見る（新しいタブで開きます）">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            @toyota_budou をフォロー
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== SEASON ========== -->
+    <section class="sec" id="season" aria-labelledby="season-h">
+      <div class="sec__in">
+        <header class="sec__hd reveal">
+          <span class="sec__label">Season</span>
+          <h2 class="sec__ttl" id="season-h">販売時期</h2>
+          <p class="sec__lead">8月上旬から販売開始。品種によって旬の時期が異なります。</p>
+        </header>
+        <div class="reveal">
+          <div class="season-bar" id="seasonBar" role="list" aria-label="月別販売カレンダー">
+            <div class="smo" role="listitem" data-season="off">
+              <span class="smo__grape" aria-hidden="true">🍃</span>
+              <span class="smo__l">準備中</span><span class="smo__n">6</span>
+            </div>
+            <div class="smo" role="listitem" data-season="off">
+              <span class="smo__grape" aria-hidden="true">🍃</span>
+              <span class="smo__l">準備中</span><span class="smo__n">7</span>
+            </div>
+            <div class="smo smo--on" role="listitem" data-season="on" aria-label="8月：販売開始">
+              <span class="smo__grape" aria-hidden="true">🍇</span>
+              <span class="smo__l">販売開始</span><span class="smo__n">8</span>
+            </div>
+            <div class="smo smo--on" role="listitem" data-season="on" aria-label="9月：最盛期">
+              <span class="smo__grape" aria-hidden="true">🍇</span>
+              <span class="smo__l">最盛期</span><span class="smo__n">9</span>
+            </div>
+            <div class="smo smo--dim" role="listitem" data-season="dim" aria-label="10月：終盤">
+              <span class="smo__grape" aria-hidden="true">🍂</span>
+              <span class="smo__l">終盤</span><span class="smo__n">10</span>
+            </div>
+            <div class="smo" role="listitem" data-season="off">
+              <span class="smo__grape" aria-hidden="true">🍃</span>
+              <span class="smo__l">終了</span><span class="smo__n">11</span>
+            </div>
+          </div>
+          <p class="season-note">※ 天候・生育状況により販売時期が変動する場合があります。売り切れ次第終了です。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><hr></div>
+
+    <!-- ========== ACCESS ========== -->
+    <section class="sec" id="access" aria-labelledby="access-h">
+      <div class="sec__in">
+        <header class="sec__hd reveal">
+          <span class="sec__label">Access</span>
+          <h2 class="sec__ttl" id="access-h">直売店へのアクセス</h2>
+          <p class="sec__lead">愛知県豊田市の直売店にてお待ちしています。</p>
+        </header>
+        <div class="access__g">
+          <div class="reveal">
+            <table class="tbl" aria-label="店舗情報">
+              <tbody>
+                <tr>
+                  <th scope="row">所在地</th>
+                  <td>
+                    〒471-0075<br>
+                    愛知県豊田市日之出町2丁目10-3<br>
+                    山本ビル 1階西<br>
+                    <small style="color:var(--text-3);font-size:12px">（向かって右側の店舗）</small>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">営業時間</th>
+                  <td>
+                    8月：毎日営業（無休）<br>
+                    9月：月曜定休<br>
+                    10:00〜17:00（売り切れ次第終了）<br>
+                    <small style="color:var(--text-3);font-size:12px">※ 12:00〜13:00 昼休憩</small>
+                  </td>
+                </tr>
+                <tr><th scope="row">販売期間</th><td>8月上旬〜（売り切れ次第終了）</td></tr>
+                <tr><th scope="row">販売価格</th><td>1kg あたり 2,000円</td></tr>
+                <tr><th scope="row">支払方法</th><td>現金のみ</td></tr>
+                <tr>
+                  <th scope="row">販売形式</th>
+                  <td>
+                    お持ち帰り専用<br>
+                    <small style="color:var(--text-3);font-size:12px">※ 発送・配送の対応はしておりません</small>
+                  </td>
+                </tr>
+                <tr><th scope="row">取扱品種</th><td>巨峰・シャインマスカット・ピオーネ・富士の輝</td></tr>
+                <tr>
+                  <th scope="row">Instagram</th>
+                  <td>
+                    <a href="https://www.instagram.com/toyota_budou/" target="_blank" rel="noopener noreferrer" aria-label="Instagramへ（新しいタブ）">@toyota_budou</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="access__note">
+              ※ 品種・数量は日により異なります。<br>
+              ※ 営業状況は変動する場合がございます。
+            </p>
+          </div>
+          <div class="reveal reveal--d2">
+            <div class="mapw">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.7048323524346!2d137.1630123!3d35.0891071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a069ccabe6fd%3A0x69af1d0fc03905e2!2z44CSNDcxLTAwNzUg5oSb55-l55yM6LGK55Sw5biC5pel5LmL5Ye655S677yS5LiB55uu77yR77yQ4oiS77yTIOWxseacrOODk-ODqw!5e0!3m2!1sja!2sjp!4v1787459819635!5m2!1sja!2sjp"
+                width="600" height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="篠田ぶどう園の地図">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-band" aria-labelledby="cta-h">
+      <div class="cta-band__in reveal">
+        <span class="cta-band__eyebrow">Shinoda Budouen</span>
+        <h2 class="cta-band__h" id="cta-h">
+          今年もぶどうの季節が<br>やってきます。
+        </h2>
+        <p class="cta-band__p">
+          毎年8月上旬から、新鮮なぶどうを直売店でお届けします。<br>
+          ご家族で、贈り物に、ぜひ一度お立ち寄りください。
+        </p>
+        <a class="btn-white" href="#access">直売店の場所を見る</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="ftr" role="contentinfo">
+    <div class="ftr__in">
+      <div class="ftr__top">
+        <div>
+          <p class="ftr__logo">
+            篠田ぶどう園
+            <span class="ftr__logo-en">Shinoda Budouen</span>
+          </p>
+        </div>
+        <nav class="ftr__nav" aria-label="フッターナビゲーション">
+          <a class="ftr__a" href="#news">お知らせ</a>
+          <a class="ftr__a" href="#about">農園について</a>
+          <a class="ftr__a" href="#farmer">農家紹介</a>
+          <a class="ftr__a" href="#products">品種</a>
+          <a class="ftr__a" href="#gallery">写真</a>
+          <a class="ftr__a" href="#access">アクセス</a>
+          <a class="ftr__a" href="https://www.instagram.com/toyota_budou/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+      </div>
+      <p class="ftr__copy">
+        <small>〒471-0075 愛知県豊田市日之出町2丁目10-3 山本ビル1階西 &copy; 篠田ぶどう園</small>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+
+    /* ---- Hamburger ---- */
+    const ham = document.querySelector('.ham');
+    const drawer = document.getElementById('drawer');
+    function toggleDrawer(open) {
+      ham.setAttribute('aria-expanded', String(open));
+      ham.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      drawer.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    ham.addEventListener('click', () => toggleDrawer(ham.getAttribute('aria-expanded') !== 'true'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleDrawer(false)));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && ham.getAttribute('aria-expanded') === 'true') {
+        toggleDrawer(false);
+        ham.focus();
+      }
+    });
+
+    /* ---- Header scroll ---- */
+    const hdr = document.querySelector('.hdr');
+    const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ---- Scroll reveal ---- */
+    const revealIO = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08, rootMargin: '0px 0px -28px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+    /* ---- Active nav highlight ---- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav__a');
+    const navIO = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(a => {
+            a.removeAttribute('aria-current');
+            if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+          });
+        }
+      });
+    }, { threshold: .35 });
+    sections.forEach(s => navIO.observe(s));
+
+    /* ---- News: Googleスプレッドシート連携 ----
+       【設定手順】
+       1. gas_news.js の内容を Google Apps Script に貼り付けてデプロイ
+       2. 発行されたウェブアプリURLを下の GAS_URL に貼り付ける
+       3. スプレッドシートの列構成：A=日付 / B=タグ / C=内容（1行目はヘッダー）
+       -------------------------------------------------- */
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbyy_FWVv0h-uXSq6QnYvFL7PQygnFFYeUA3dDQ6Yu-n/dev'; // ← ここにGASのURLを貼り付ける
+
+    const newsWrap    = document.getElementById('newsWrap');
+    const newsLoading = document.getElementById('newsLoading');
+
+    /* タグ種別に応じたCSSクラスを返す */
+    function tagClass(tag) {
+      return ['Instagram', 'SNS'].includes(tag)
+        ? 'news__tag news__tag--g'
+        : 'news__tag';
+    }
+
+    /* 日付文字列を表示用とdatetime属性用に変換 */
+    function parseDate(str) {
+      const s = String(str).replace(/\//g, '-').trim();
+      const [y, m, d] = s.split('-');
+      if (!y || !m || !d) return { display: str, datetime: str };
+      const mm = m.padStart(2, '0'), dd = d.padStart(2, '0');
+      return { display: `${y}.${mm}.${dd}`, datetime: `${y}-${mm}-${dd}` };
+    }
+
+    /* お知らせ1件のHTML文字列を生成 */
+    function buildNewsItem(row, index) {
+      const { display, datetime } = parseDate(row[0] ?? '');
+      const tag  = String(row[1] ?? 'お知らせ').trim();
+      const body = String(row[2] ?? '').trim();
+      const delayClass = index > 0 ? ` reveal--d${Math.min(index, 4)}` : '';
+      return `
+        <li class="reveal${delayClass}">
+          <div class="news__item" role="listitem" tabindex="0"
+               aria-label="${datetime} ${body.slice(0, 30)}">
+            <time class="news__date" datetime="${datetime}">${display}</time>
+            <span class="${tagClass(tag)}">${tag}</span>
+            <p class="news__ttl">${body}</p>
+          </div>
+        </li>`;
+    }
+
+    async function loadNews() {
+      /* URLが未設定のときはガイドメッセージを表示 */
+      if (!GAS_URL || GAS_URL === 'https://script.google.com/macros/s/AKfycbyy_FWVv0h-uXSq6QnYvFL7PQygnFFYeUA3dDQ6Yu-n/dev') {
+        newsLoading.outerHTML =
+          '<p class="news__error">※ お知らせはGoogleスプレッドシートと連携して表示されます。<br>GAS URLを設定後に自動で反映されます。</p>';
+        return;
+      }
+      try {
+        const res  = await fetch(GAS_URL);
+        const data = await res.json();          // [[日付, タグ, 内容], ...]
+        const rows = data.filter(r => r[0] && r[2]); // 空行除外
+
+        if (!rows.length) {
+          newsLoading.outerHTML = '<p class="news__error">現在お知らせはありません。</p>';
+          return;
+        }
+
+        newsLoading.remove();
+        const ul = document.createElement('ul');
+        ul.setAttribute('role', 'list');
+        rows.forEach((row, i) => ul.insertAdjacentHTML('beforeend', buildNewsItem(row, i)));
+        newsWrap.appendChild(ul);
+
+        /* 動的に追加した要素にもrevealを適用 */
+        ul.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
+
+      } catch {
+        newsLoading.outerHTML = '<p class="news__error">お知らせの読み込みに失敗しました。<br>しばらくしてからページを再読み込みしてください。</p>';
+      }
+    }
+
+    loadNews();
+
+    /* ---- Season bar animation ---- */
+    const seasonBar  = document.getElementById('seasonBar');
+    const smoItems   = seasonBar ? [...seasonBar.querySelectorAll('.smo')] : [];
+    let seasonDone   = false;
+
+    function runSeasonAnim() {
+      if (seasonDone || !smoItems.length) return;
+      seasonDone = true;
+
+      // 全月を一度フラットにリセット
+      seasonBar.classList.add('is-animating');
+      smoItems.forEach(el => {
+        el.classList.remove('lit-on', 'lit-dim');
+      });
+
+      // 各月を順番に点灯（160ms ずつ遅延）
+      smoItems.forEach((el, i) => {
+        const season = el.dataset.season; // 'on' | 'dim' | 'off'
+        setTimeout(() => {
+          if (season === 'on')  el.classList.add('lit-on');
+          if (season === 'dim') el.classList.add('lit-dim');
+          // off は点灯しないがフェードインだけ
+          el.style.opacity = '1';
+        }, 200 + i * 180);
+      });
+
+      // アニメ完了後、is-animating を外して CSS クラスに戻す
+      setTimeout(() => {
+        seasonBar.classList.remove('is-animating');
+      }, 200 + smoItems.length * 180 + 400);
+    }
+
+    if (seasonBar) {
+      const seasonIO = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runSeasonAnim();
+            seasonIO.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .4 });
+      seasonIO.observe(seasonBar);
+    }
+
+    /* ---- gallery__cluster--right: margin-top をアニメ keyframe に同期 ---- */
+    /* breatheR keyframe は CSS で margin-top をベースに translateY しているため、
+       ResizeObserver で実値を更新する必要はなく CSS clamp() で完結しています。   */
+  </script>
+</body>
+</html>
